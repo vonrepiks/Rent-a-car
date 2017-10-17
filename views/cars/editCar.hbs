@@ -1,0 +1,25 @@
+<div id="form">
+    <h1>Edit car</h1>
+</div>
+<form action="/cars/edit/{{car._id}}" method="post">
+    <div class="container">
+        <label><b>Mark</b></label><br>
+        <input type="text" placeholder="Enter mark" name="mark" value="{{car.mark}}"><br>
+
+        <label><b>Model</b></label><br>
+        <input type="text" placeholder="Enter model" name="model" value="{{car.model}}"><br>
+
+        <label><b>Image</b></label><br>
+        <input type="text" placeholder="Enter image url" name="image" value="{{car.image}}"><br>
+
+        <label><b>Price per day</b></label><br>
+        <input type="text" placeholder="Enter price per day" name="pricePerDay" value="{{car.pricePerDay}}"><br>
+
+        <label><b>Production year</b></label><br>
+        <input type="text" placeholder="Enter production year" name="productionYear" value="{{car.productionYear}}"><br>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Edit</button>
+        </div>
+    </div>
+</form>

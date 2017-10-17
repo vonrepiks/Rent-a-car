@@ -1,0 +1,24 @@
+<div id="form">
+    <h1>Rent car</h1>
+</div>
+<form action="/cars/rent/{{car._id}}" method="post">
+    <div class="container">
+        <p>
+            <img src="{{car.image}}">
+        <p>mark: {{car.mark}}</p>
+        <p>model: {{car.model}}</p>
+        <p>price per day: {{car.pricePerDay}} BGN</p>
+        <p>production year: {{car.productionYear}}</p>
+        </p><br>
+
+        <label><b>Date of rent</b></label><br>
+        <input type="date" placeholder="Enter date of rent" name="dateOfRent"><br><br>
+
+        <label><b>Days for rent</b></label><br>
+        <input type="text" placeholder="Enter days for rent" name="days"><br>
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Rent</button>
+        </div>
+    </div>
+</form>
