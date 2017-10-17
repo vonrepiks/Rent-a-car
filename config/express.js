@@ -31,8 +31,9 @@ module.exports = (app) => {
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(flash());
+    app.use(favicon(path.join(__dirname,'../public/img/favicon.ico')));
     app.use(express.static('public'));
-    app.use(favicon(path.join(__dirname,'../public','img','favicon.ico')));
+
     app.use((req, res, next) => {
         if (req.user) {
             res.locals.currentUser = req.user;
