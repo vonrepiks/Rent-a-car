@@ -4,10 +4,11 @@
 
 module.exports = {
     development: {
-        connectionString: process.env.MONGOLAB_URI || "mongodb://localhost:27017/rent-a-car-db",
-        port: process.env.PORT || 3000
+        connectionString: "mongodb://localhost:27017/rent-a-car-db",
+        port: 3000
     },
     production: {
-
+        connectionString: process.env.MONGOLAB_URI,
+        port: process.env.PORT
     }
 };
