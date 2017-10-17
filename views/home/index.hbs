@@ -1,0 +1,34 @@
+<br><br>
+{{#if currentUser.isAdmin}}
+    {{#each cars}}
+        <img src="{{image}}">
+        <p>mark: {{mark}}</p>
+        <p>model: {{model}}</p>
+        <p>price per day: {{pricePerDay}} BGN</p>
+        <p>production year: {{productionYear}}</p>
+        <a href="/cars/edit/{{_id}}">Edit</a>
+        <a href="/cars/rent/{{_id}}">Rent</a><br>
+        <hr noshade><br>
+    {{/each}}
+{{else}}
+    {{#if currentUser}}
+        {{#each cars}}
+            <img src="{{image}}">
+            <p>mark: {{mark}}</p>
+            <p>model: {{model}}</p>
+            <p>price per day: {{pricePerDay}} BGN</p>
+            <p>production year: {{productionYear}}</p><br>
+            <a href="/cars/rent/{{_id}}">Rent</a><br>
+            <hr noshade><br>
+        {{/each}}
+    {{else}}
+        {{#each cars}}
+            <img src="{{image}}">
+            <p>mark: {{mark}}</p>
+            <p>model: {{model}}</p>
+            <p>price per day: {{pricePerDay}} BGN</p>
+            <p>production year: {{productionYear}}</p><br>
+            <hr noshade><br>
+        {{/each}}
+    {{/if}}
+{{/if}}
